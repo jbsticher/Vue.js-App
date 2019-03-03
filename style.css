@@ -1,0 +1,49 @@
+body {
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2em;
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
+  h3, label, span {
+      margin-left: 2%;
+      text-align: center;
+  }  
+  
+  input, button, p, div, section, article, select, ul {
+    padding: 2px;
+    box-sizing: border-box;
+    width:100%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1em;
+    margin: 0.5em;
+    list-style: none;
+  }
+.done {
+      text-decoration: line-through; 
+  }
+
+.checkbox {
+    margin-top:75px;
+    width: auto; 
+  }
+
+
+
+
+
+      
+      
+  
+  
+
+
+
+
+
+
+
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list Vue.js</title>
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app">
+        <h3>{{title}}</h3><!-- title is retrieved from the app.js file -->
+        <div>
+        <form @submit.prevent="addTodo"> <!--when form is submitted...call the function "addTodo" in app.js file-->
+            <label for="newTodo">New Todo:</label>
+            <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
+            <button type="submit" name="button">Add</button>
+        </form>   
+        <button @click="allDone" type="button" name="button">Mark All Items Done
+        </button>
+        </div>
+         <ul>
+            <!-- v-for: "for item in array of items..."  -->
+            <li v-for="todo in todos">
+            
+            <input type="checkbox" class="checkbox" v-model="todo.done"> 
+            
+            <!-- bind the span class with a colon(:) -->
+          <span :class="{ done: todo.done }">{{todo.title}}</span>
+            
+          <button @click="removeTodo(todo)" type="button" name="button">Remove item
+          </button>
+        </li>
+        </ul>
+    </main>
+    <!-- Script tag for the vue.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
